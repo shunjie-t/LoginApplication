@@ -22,14 +22,14 @@ localhost:8080/
 
 ## User credentials
 
-bryan
+bryan<br />
 password
 
-michelle
+michelle<br />
 password
 
-jane
+jane<br />
 password
 
-tom
+tom<br />
 password
