@@ -4,10 +4,10 @@ This appplication is created with Spring Boot as the backend, it utilizes REST A
 ## Software dependencies
 The following softwares has to be installed for this application to launch.
 
-Jdk 17.0.2
-Maven 3.8.4
-Node.js v16.14.0
-Npm 8.3.1
+Jdk 17.0.2<br />
+Maven 3.8.4<br />
+Node.js v16.14.0<br />
+Npm 8.3.1<br />
 
 ## Setup and start application
 In a command prompt/terminal and run the following commands.
