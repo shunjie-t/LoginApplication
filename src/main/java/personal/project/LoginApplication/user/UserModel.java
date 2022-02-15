@@ -20,6 +20,7 @@ public class UserModel {
     private String username;
     private String password;
     private String role;
+    private String email;
 
     public UserModel() {
     }
@@ -29,11 +30,12 @@ public class UserModel {
         this.password = password;
     }
 
-    public UserModel(String name, String username, String password, String role) {
+    public UserModel(String name, String username, String password, String role, String email) {
         this.name = name;
         this.username = username;
         this.password = password;
         this.role = role;
+        this.email = email;
     }
 
     public int getUser_id() {
@@ -76,14 +78,23 @@ public class UserModel {
         this.role = role;
     }
 
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
     @Override
     public String toString() {
-        return "User{" +
+        return "UserModel{" +
                 "user_id=" + user_id +
                 ", name='" + name + '\'' +
                 ", username='" + username + '\'' +
                 ", password='" + password + '\'' +
                 ", role='" + role + '\'' +
+                ", email='" + email + '\'' +
                 '}';
     }
 }

@@ -1,3 +1,10 @@
 cd src/main/frontend
-npm install
+
+if [ $1 == "install" ]
+then
+    echo "installing node packages"
+    npm install
+fi
+
+echo "starting server"
 npm start

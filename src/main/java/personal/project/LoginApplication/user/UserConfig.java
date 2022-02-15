@@ -15,28 +15,32 @@ public class UserConfig {
                     "Bryan Smith",
                     "bryan",
                     "password",
-                    "manager"
+                    "manager",
+                    "bryan.s@gmail.com"
             );
 
             UserModel Michelle = new UserModel(
                     "Michelle Jones",
                     "michelle",
                     "password",
-                    "manager"
+                    "manager",
+                    "michelle.j@gmail.com"
             );
 
             UserModel Jane = new UserModel(
                     "Jane Brown",
                     "jane",
                     "password",
-                    "user"
+                    "user",
+                    "jane.b@gmail.com"
             );
 
             UserModel Tom = new UserModel(
                     "Tom White",
                     "tom",
                     "password",
-                    "user"
+                    "user",
+                    "tom.w@gmail.com"
             );
 
             repository.saveAll(List.of(Bryan, Michelle, Jane, Tom));

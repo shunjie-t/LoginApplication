@@ -19,13 +19,16 @@ public class UserController {
     @PostMapping
     @RequestMapping(path = "login")
     public String authenticateUser(@RequestBody UserModel user) {
-        List<UserModel> res = userService.queryUserInfo(user.getUsername(), user.getPassword());
+        String unameORemail = user.getUsername() != null ? user.getUsername() : user.getEmail();
+        List<UserModel> res = userService.queryUserInfo(unameORemail, user.getPassword());
+
         if(res.size() == 1) {
             return String.format(
-                    "{\"name\": \"%s\", \"username\": \"%s\", \"role\": \"%s\"}",
+                    "{\"name\": \"%s\", \"username\": \"%s\", \"role\": \"%s\", \"email\": \"%s\"}",
                     res.get(0).getName(),
                     res.get(0).getUsername(),
-                    res.get(0).getRole()
+                    res.get(0).getRole(),
+                    res.get(0).getEmail()
             );
         }
         return "{}";

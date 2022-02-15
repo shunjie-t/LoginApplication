@@ -1,10 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
+import { useTranslation } from "react-i18next"
 
 import '../../App.css'
 
 export default function SignInPage() {
+    const { t } = useTranslation();
     var usernameInput;
     var passwordInput;
     sessionStorage.removeItem('userInfomation')
@@ -41,26 +43,24 @@ export default function SignInPage() {
 
     return (
         <div className="text-center m-5-auto">
-            <h2>Sign in</h2>
+            <h2>{t('signinTitle')}</h2>
             <form onSubmit={submitHandler} action="/home">
                 <p>
-                    <label>Username or email address</label><br/>
+                    <label>{t('usernameOrEmailLbl')}</label><br/>
                     <input type="text" name="username" onChange={usernameChangeHandler} required />
                 </p>
                 <p>
-                    <label>Password</label>
+                    <label>{t('passwordLbl')}</label>
                     <br/>
                     <input type="password" name="password" onChange={passwordChangeHandler} required />
                 </p>
-                <Link to="/forget-password"><label className="right-label">Forget password?</label></Link>
-                <br />
-                <p id="login-unsuccessful">Invalid userid or password</p>
+                <div style={{height: 40}}><p id="login-unsuccessful">{t('loginFailedLbl')}</p></div>
                 <p>
-                    <button id="sub_btn" type="submit">Login</button>
+                    <button id="sub_btn" type="submit">{t('loginBtn')}</button>
                 </p>
             </form>
             <footer>
-                <Link to="/register">Create an account</Link>
+                <Link to="/register">{t('registerLink')}</Link>
             </footer>
         </div>
     )
