@@ -1,5 +1,5 @@
 # Login Application
-This appplication is created with Spring Boot as the backend, it utilizes REST API to fetch users information for authenticating and logging in users. The Frontend uses React and it is available in English and Chinese language.
+This application is created with Spring Boot as the backend, it utilizes REST API to fetch users information for authenticating and logging in users. The Frontend uses React and it is available in 2 languages.
 
 ## Software dependencies
 The following softwares has to be installed for this application to launch.
